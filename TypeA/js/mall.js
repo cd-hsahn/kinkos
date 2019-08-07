@@ -1,0 +1,1 @@
+// TypeA Mall page JS
