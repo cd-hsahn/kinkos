@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Expires" content="-1">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta id="_csrf" name="_csrf" th:content="${_csrf.token}">
+	<meta id="_csrf_header" name="_csrf_header" th:content="${_csrf.headerName}">
+	<title>Kinkos</title>
+    <script type="text/javascript">
+        function TypeA(popHeight, popWidth) {
+            var winHeight = document.body.clientHeight;	// 현재창의 높이
+            var winWidth = document.body.clientWidth;	// 현재창의 너비
+            var winX = window.screenLeft;	// 현재창의 x좌표
+            var winY = window.screenTop;	// 현재창의 y좌표
+
+            var popX = winX + (winWidth - popWidth) / 2;
+            var popY = winY + (winHeight - popHeight) / 2;
+            window.open("TypeA/TypeA_main.html", "TypeA", "width=" + popWidth + "px,height=" + popHeight + "px,top=" + popY + ",left=" + popX);
+        }
+
+        function TypeB(popHeight, popWidth) {
+            var winHeight = document.body.clientHeight;	// 현재창의 높이
+            var winWidth = document.body.clientWidth;	// 현재창의 너비
+            var winX = window.screenLeft;	// 현재창의 x좌표
+            var winY = window.screenTop;	// 현재창의 y좌표
+
+            var popX = winX + (winWidth - popWidth) / 2;
+            var popY = winY + (winHeight - popHeight) / 2;
+            window.open("TypeB/TypeB_main.html", "TypeB", "width=" + popWidth + "px,height=" + popHeight + "px,top=" + popY + ",left=" + popX);
+        }
+    </script>
+    
+
+</head>
+<body>
+
+	<!-- wrap -->
+	<div id="wrap" class="main">
+        <div style="text-align: center;position: absolute;left: 50%;transform: translate(-50%);margin-top:60px;">
+            <img src="asset/images/GATE.png" alt="" usemap="#link">
+        </div>
+
+        <map id="link" name="link">
+            <area shape="rect" alt="" title="" coords="143,381,219,459" href="TypeA/TypeA_main.html" target="_blank" />
+            <area shape="rect" alt="" title="" coords="239,383,321,462" href="#" onclick="TypeA(700,375)" />
+            <area shape="rect" alt="" title="" coords="634,380,710,460" href="TypeB/TypeB_main.html" target="_blank" />
+            <area shape="rect" alt="" title="" coords="729,380,807,459" href="#" onclick="TypeB(700,375)" />
+            <area shape="rect" alt="" title="" coords="296,624,651,706" href="error.html" target="" />
+        </map>
+
+
+
+	</div>
+    <!--// wrap -->
+    
+
+
+</body>
+
+</html>
