@@ -175,7 +175,7 @@ h2 {font-weight: 700;font-size: 18px;}
 
 .bestPro-slide .btn-more {font-size:12px;border-bottom:2px solid #000;padding-bottom:4px;position: absolute;bottom:30px;left:0;font-weight:700;}
 
-.swiper-button-next {
+.bestPro-slide .swiper-button-next {
     background-image: url(../images/main/next.png);
     right: 20px;
     left: auto;
@@ -183,7 +183,7 @@ h2 {font-weight: 700;font-size: 18px;}
     height:84px;
     background-size:84px;
 }
-.swiper-button-prev {
+.bestPro-slide .swiper-button-prev {
   background-image: url(../images/main/prev.png);
   left: 20px;
   right: auto;
@@ -218,9 +218,10 @@ h2 {font-weight: 700;font-size: 18px;}
 .banner-area li.item.list1 a .color_bg { right:-300px; }
 .banner-area li.item.list2 a .color_bg { left:-300px; }
 
-
 .banner-area li.item.list1 a:hover .color_bg { right:0; }
 .banner-area li.item.list2 a:hover .color_bg { left:0; }
+
+
 
 
 
@@ -261,3 +262,30 @@ h2 {font-weight: 700;font-size: 18px;}
 
 
 .insta-slide .swiper-slide .imgbox:hover .color_bg {width:500px;top:170px;transition:all 0.5s;}
+
+
+
+
+.sevice-area {position: relative;height:550px;margin-top:140px;}
+.sevice-area strong {font-size:36px;margin-top:32px;display:block;}
+
+.sevice-area .gallery-thumbs {width:390px;height:60px; box-sizing: border-box; position: absolute; z-index: 99;border-bottom:3px solid #000;padding-bottom:4px; margin-top:20px;}
+.sevice-area .gallery-thumbs .swiper-slide { opacity: 0.2; width:336px; font-size:36px;font-weight: 700;display: initial;}
+
+.sevice-area .gallery-thumbs .swiper-wrapper {}
+.sevice-area .gallery-thumbs .swiper-slide-active { opacity: 1; }
+.sevice-area .gallery-top .swiper-slide { opacity: 0.4;}
+.sevice-area .gallery-top .swiper-slide-active { opacity: 1; }
+.sevice-area .gallery-top { position: relative; height: 550px; left: 390px; overflow: inherit;}
+
+
+.sevice-area .gallery-top .text {width:336px;overflow: hidden;position:absolute;left:-290px;top: 150px;color:#545454;font-size:16px;line-height: 24px;opacity: 0;transition:all 0.5s;}
+
+
+.sevice-area .gallery-top .swiper-slide-active .text  { opacity: 1;left:-390px;transition:all 0.5s;transition-delay: 0.5s;}
+
+.sevice-area  .pg_nav {position:absolute;bottom:-315px;display: block;font-size:18px;width:336px;height:40px;}
+
+
+.sevice-area .gallery-text {position:absolute;bottom:0;display: block;width:336px;}
+.sevice-area .gallery-top .swiper-slide.swiper-slide-prev {opacity: 0;}

@@ -118,6 +118,72 @@
     </li>
   </ul>
   </div>
+  <div class="sevice-area layout-width">
+    <h2>SERVICE</h2>
+    <strong>kinko’s에서 제공하는</strong>
+
+  <div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="title">디자인 출력・복사</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="title">제본</div>
+      </div>
+      <div class="swiper-slide">
+        <div class="title">디자인 출력・복사 </div>
+      </div>
+    </div>
+    <div class="pg_nav">
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+
+    <div class="swiper-container gallery-top">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/main/service-1.png">
+          <div class="text">와이어제본, 스트립제본, 열제본, 중철제본 등
+            고객님이 원하시는 용도에 맞게 다양한 용지 및
+            제본방법을 갖추고 있습니다.</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/main/service-2.png">
+          <div class="text">와이어제본, 스트립제본, 열제본, 중철제본 등
+            고객님이 원하시는 용도에 맞게 다양한 용지 및
+            제본방법을 갖추고 있습니다.</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/main/service-3.png">
+          <div class="text">와이어제본, 스트립제본, 열제본, 중철제본 등
+            고객님이 원하시는 용도에 맞게 다양한 용지 및
+            제본방법을 갖추고 있습니다.</div>
+        </div>
+      </div>
+      <!-- Add Arrows -->
+
+    </div>
+
+
+
+        
+        </div>
+  </div>
+<!-- Swiper JS -->
+
+
+
+
+
+
+
+
+
 
   <!-- visual Swiper -->
   <div class="swiper-container insta-slide layout-width">
@@ -180,6 +246,11 @@
   <div class="layout-width footer"><img src="images/main/footer.png" alt=""></div>
 
 
+
+
+ 
+
+
   </div>
   <div id="mo">
 
@@ -223,6 +294,45 @@
           loop: true,
           loopFillGroupWithBlank: true,
         });
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      direction: 'vertical',
+      slidesPerView: 1,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+
+
+
+     var galleryTop = new Swiper('.gallery-text', {
+        slidesPerView: '1',
+        loop: true,
+        loopFillGroupWithBlank: true,
+  
+        thumbs: {
+          swiper: galleryTop
+        }
+      });
+
   </script>
 </body>
 </html>
