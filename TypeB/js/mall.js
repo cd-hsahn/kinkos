@@ -106,3 +106,15 @@ var consultSlide = new Swiper('.consult_slide', {
     }
   },
 });
+
+// mobile
+(function() {
+  $('.btn_menu').on('click', function() {
+    $('.menu').addClass('open');
+    $('body').css('overflow', 'hidden');
+  });
+  $('.btn_close').on('click', function() {
+    $('.menu').removeClass('open');
+    $('body').css('overflow', 'visible');
+  });
+})();
