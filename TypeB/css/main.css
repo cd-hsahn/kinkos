@@ -269,8 +269,11 @@ h2 {font-weight: 700;font-size: 18px;}
 .sevice-area {position: relative;height:550px;margin-top:140px;}
 .sevice-area strong {font-size:36px;margin-top:32px;display:block;}
 
-.sevice-area .gallery-thumbs {width:390px;height:60px; box-sizing: border-box; position: absolute; z-index: 99;border-bottom:3px solid #000;padding-bottom:4px; margin-top:20px;}
-.sevice-area .gallery-thumbs .swiper-slide { opacity: 0.2; width:336px; font-size:36px;font-weight: 700;display: initial;}
+
+.sevice-area .gallery-thumbs {width:390px;height:60px; box-sizing: border-box; position: absolute; z-index: 99;border-bottom:3px solid #000;padding-bottom:4px; margin-top:20px;overflow: inherit;}
+.sevice-area .gallery-thumbs .swiper-slide { opacity: 0; width:336px; font-size:36px;font-weight: 700;display: initial;}
+
+.sevice-area .gallery-thumbs::before {content:"";clear: both;width:24px;height:24px;background: url(../images/main/arr.png) no-repeat 0 0;position: absolute;right:0;top:15px;}
 
 .sevice-area .gallery-thumbs .swiper-wrapper {}
 .sevice-area .gallery-thumbs .swiper-slide-active { opacity: 1; }
@@ -284,8 +287,28 @@ h2 {font-weight: 700;font-size: 18px;}
 
 .sevice-area .gallery-top .swiper-slide-active .text  { opacity: 1;left:-390px;transition:all 0.5s;transition-delay: 0.5s;}
 
-.sevice-area  .pg_nav {position:absolute;bottom:-315px;display: block;font-size:18px;width:336px;height:40px;}
+.sevice-area  .pg_nav {position:absolute;bottom:-315px;display: block;font-size:18px;width:120px;height:10px;}
 
 
 .sevice-area .gallery-text {position:absolute;bottom:0;display: block;width:336px;}
 .sevice-area .gallery-top .swiper-slide.swiper-slide-prev {opacity: 0;}
+
+
+
+
+.gallery-thumbs .swiper-button-next {
+    background-image: url(../images/main/next-small.png);
+    right: 0;
+    left: auto;
+    width:21px;
+    height:18px;
+    background-size:21px;
+}
+.gallery-thumbs .swiper-button-prev {
+  background-image: url(../images/main/prev-small.png);
+  left: 0;
+  right: auto;
+  width:21px;
+    height:18px;
+  background-size:21px;
+}
