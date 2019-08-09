@@ -89,6 +89,207 @@ table {
 h2 {font-weight: 700;font-size: 18px;}
 
 
+
+/* header */
+#header {
+  position: relative;
+  background: #fff;
+  z-index: 20;
+}
+.header_top {
+  overflow: hidden;
+  height: 70px;
+  padding: 0 195px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.header_top .logo {
+  float: left;
+  margin-top: 16px;
+}
+.header_top .menu_list {
+  overflow: hidden;
+  float: right;
+  margin-top: 28px;
+}
+.header_top .menu_list > li {
+  position: relative;
+  float: left;
+  padding: 0 10px;
+}
+.header_top .menu_list > li:after {
+  content: '';
+  position: absolute;
+  right: 0; top: 5%;
+  width: 1px; height: 90%;
+  background: #bbb;
+}
+.header_top .menu_list > li:first-child {
+  padding-left: 0;
+}
+.header_top .menu_list > li:last-child {
+  padding-right: 0;
+}
+
+.gnb_wrap {
+  position: relative;
+  height: 57px;
+  padding: 0 195px;
+  background: #03a2ea;
+}
+.gnb_wrap .company_gnb {
+  position: absolute;
+  left: 195px; top: 0;
+  background: #fff;
+  width: 130px; height: 100%;
+  transition: width .4s linear;
+  z-index: 10;
+}
+.company_gnb .btn_gnbtoggle {
+  position: absolute;
+  right: 20px; top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: #03a2ea;
+  z-index: 10;
+}
+.company_gnb .btn_gnbtoggle::after {
+  content: '';
+  display: inline-block;
+  width: 8px; height: 14px;
+  margin-left: 30px;
+  background: url('../images/mall/arr-right-blue.jpg') no-repeat center;
+}
+.company_gnb .gnb_links {
+  display: inline-block;
+  position: relative;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s;
+}
+.company_gnb .gnb_links::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.company_gnb .gnb_links > li {
+  float: left;
+  margin-left: 50px;
+}
+.company_gnb .gnb_links > li:first-child {
+  margin-left: 0;
+}
+.company_gnb .gnb_links > li > a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+.company_gnb .gnb_links > li > a:hover {
+  color: #03a2ea;
+}
+.gnb_wrap .company_gnb.active {
+  width: calc(100% - 390px);
+}
+.gnb_wrap .company_gnb .gnb_links.on {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gnb_wrap .gnb {
+  position: relative;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+}
+.gnb_wrap .gnb > li {
+  float: left;
+  margin-left: 50px;
+}
+.gnb_wrap .gnb > li:first-child {
+  margin-left: 0;
+}
+.gnb_wrap .gnb > li > a {
+  font-size: 16px;
+  color: #fff;
+}
+.gnb_wrap .gnb > li > a.not_on {
+  opacity: .8;
+}
+.gnb_wrap .btn_sch {
+  position: absolute;
+  right: 195px; top: 50%;
+  transform: translateY(-50%);
+  width: 21px; height: 21px;
+  background: url('../images/mall/ico-sch.png') no-repeat center;
+}
+
+.sub_gnb {
+  display: none;
+  position: absolute;
+  left: 0; top: 127px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 20;
+}
+.sub_gnb .sub_gnb_item {
+  overflow: hidden;
+  position: relative;
+  padding: 40px 195px 40px 445px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: rgba(3, 162, 234, 0.9);
+}
+.sub_gnb .sub_gnb_item > strong {
+  position: absolute;
+  left: 195px; top: 40px;
+  font-size: 22px;
+  color: #fff;
+}
+.sub_gnb .sub_gnb_item .link_list {
+  float: left;
+}
+.sub_gnb .sub_gnb_item .link_list > li {
+  margin-top: 10px;
+}
+.sub_gnb .sub_gnb_item .link_list > li:first-child {
+  margin-top: 0;
+}
+.sub_gnb .sub_gnb_item .link_list > li > a {
+  font-size: 16px;
+  color: #fff;
+}
+.sub_gnb .sub_gnb_item .img_list {
+  overflow: hidden;
+  float: right;
+  margin-left: 130px;
+}
+.sub_gnb .sub_gnb_item .img_list > li {
+  float: left;
+  margin-left: 20px;
+}
+.sub_gnb .sub_gnb_item .img_list > li:first-child {
+  margin-left: 0;
+}
+.sub_gnb .location_item {
+
+}
+.sub_gnb .location_item img {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .visual-slide {height:600px;position: relative;}
 .visual-slide .text {display:block;text-align: left;position:absolute;top:134px;left:50%;transform:translateX(-50%);padding-left:130px;width:1530px;}
 .visual-slide .title {font-size:40px;color:#fff;letter-spacing: -0.4px; display: block;line-height:48px;}
@@ -312,3 +513,14 @@ h2 {font-weight: 700;font-size: 18px;}
     height:18px;
   background-size:21px;
 }
+
+  #mo {display:none;}
+  #pc {display:block; overflow: hidden;}
+
+
+@media screen and (max-width: 768px) {
+  #mo {display:block;}
+  #pc {display:none;}
+}
+
+

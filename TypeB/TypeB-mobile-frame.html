@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kinko's TypeB Main</title>
+  <style>
+      body {background:#333;}
+#phone {
+    display: block;
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    width: 445px;
+    height: 902px;
+    background: url(../phone.png) no-repeat 0 0 /cover;
+    z-index: 99;
+    transform: translateX(-50%)
+}
+#phone iframe {
+    position: absolute;
+    left: 35px;
+    top: 80px;
+    width: 375px;
+    height:781px;
+    z-index: 0;
+}
+#phone .bottom {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 449px;
+    height: 148px;
+    background: url(../phone_bottom.png) no-repeat 0 100% /cover;
+    z-index: 100;
+}
+  </style>
+</head>
+<body>
+  <div id="phone">
+    <iframe id="frm1" name="frm1" src="TypeB-main.html" frameborder="0"></iframe>
+    <div class="bottom"></div>
+</div>
+</body>
+</html>

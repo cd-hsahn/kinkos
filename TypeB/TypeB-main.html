@@ -12,6 +12,62 @@
 </head>
 <body>
   <div id="pc">
+    <!-- header -->
+    <div id="header">
+      <div class="header_top">
+        <a href="#url" class="logo"><img src="./images/mall/logo.png" alt=""></a>
+        <ul class="menu_list">
+          <li><a href="#url">로그인</a></li>
+          <li><a href="#url">회원가입</a></li>
+          <li><a href="#url">장바구니 <span class="point_blue">(0)</span></a></li>
+          <li><a href="#url">주문/배송조회</a></li>
+          <li><a href="#url"><b>EN</b></a></li>
+        </ul>
+      </div>
+      <div class="gnb_wrap">
+        <div class="company_gnb">
+          <a href="#url" class="btn_gnbtoggle">Kinko's</a>
+          <ul class="gnb_links">
+            <li><a href="#url">킨코스 소개</a></li>
+            <li><a href="#url">서비스 안내</a></li>
+            <li><a href="#url" class="point_circle">이벤트/K매거진</a></li>
+            <li><a href="#url">고객지원</a></li>
+            <li><a href="#url" class="point_location black">센터안내</a></li>
+          </ul>
+        </div>
+        <ul class="gnb">
+          <li><a href="#url">즉석상품보기</a></li>
+          <li><a href="#url">대형출력/보드</a></li>
+          <li><a href="#url">디지털출력/스티커</a></li>
+          <li><a href="#url">배너/POP/등신대</a></li>
+          <li><a href="#url">슬로건/인화/카드</a></li>
+          <li><a href="#url">이벤트소품/기타</a></li>
+          <li><a href="#url" class="point_location white js-location">센터안내</a></li>
+        </ul>
+        <a href="#url" class="btn_sch"></a>
+      </div>
+      <div class="sub_gnb">
+        <div class="sub_gnb_item">
+          <strong class="js-snb-title">대형출력/보드</strong>
+          <ul class="link_list">
+            <li><a href="#url">패키지</a></li>
+            <li><a href="#url">컬러대형출력</a></li>
+            <li><a href="#url">흑백대형출력</a></li>
+            <li><a href="#url">현수막</a></li>
+            <li><a href="#url">비규격/상담문의</a></li>
+          </ul>
+          <ul class="img_list">
+            <li><a href="#url"><img src="./images/mall/img-snb01.jpg" alt=""></a></li>
+            <li><a href="#url"><img src="./images/mall/img-snb02.jpg" alt=""></a></li>
+            <li><a href="#url"><img src="./images/mall/img-snb03.jpg" alt=""></a></li>
+            <li><a href="#url"><img src="./images/mall/img-snb04.jpg" alt=""></a></li>
+          </ul>
+        </div>
+    
+        <div class="location_item"><img src="./images/mall/img-map.jpg" alt=""></div>
+      </div>
+    </div>
+
   <!-- visual Swiper -->
       <div class="swiper-container visual-slide">
         <div class="swiper-wrapper">
@@ -170,9 +226,6 @@
     </div>
 
 
-
-        
-        </div>
   </div>
 <!-- Swiper JS -->
 
@@ -253,7 +306,7 @@
 
   </div>
   <div id="mo">
-
+    <img src="images/main/mobile-all.png" alt="" style="width:100%;">
   </div>
 
   <script src="./js/jquery-3.4.1.min.js"></script>
@@ -298,6 +351,7 @@
     var galleryThumbs = new Swiper('.gallery-thumbs', {
       slidesPerView: 1,
       freeMode: true,
+      loop: true,
       watchSlidesVisibility: true,
       pagination: {
         el: '.swiper-pagination',
