@@ -15,7 +15,7 @@
   function showMainGnb() {
     setTimeout(function() {
       $('.gnb_links').addClass('on');
-    },1000);
+    },400);
   }
 })();
 

@@ -170,7 +170,7 @@ strong {
   left: 195px; top: 0;
   background: #fff;
   width: 130px; height: 100%;
-  transition: width 1s linear;
+  transition: width .4s linear;
   z-index: 10;
 }
 .company_gnb .btn_gnbtoggle {
