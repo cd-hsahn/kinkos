@@ -127,3 +127,7 @@ var lifeSlide = new Swiper('.life_slide', {
   spaceBetween: 30,
 });
 
+$('.btn_plus').on('click', function() {
+  $(this).toggleClass('on');
+  $('.btn_list').toggleClass('on');
+});

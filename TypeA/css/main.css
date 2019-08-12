@@ -1115,7 +1115,8 @@ position: absolute;
     display: block;
   }
   #mo_content {
-    padding-bottom: 80px;
+    position: relative;
+    /* padding-bottom: 80px; */
   }
   .mo_header {
     overflow: hidden;
@@ -1595,6 +1596,36 @@ position: absolute;
   }
   .m_sub_content > img {
     width: 100%;
+  }
+  .float_btn {
+    position: absolute;
+    right: 0; top: 578px;
+  }
+  .float_btn .btn_plus {
+    position: relative;
+    display: inline-block;
+    width: 70px; height: 70px;
+    background: url('../images/main/btn-plus.png') no-repeat center;
+    z-index: 99;
+  }
+  .float_btn .btn_plus.on {
+    background: url('../images/main/btn-minus.png') no-repeat center;
+  }
+  .float_btn .btn_list {
+    opacity: 0;
+    position: absolute;
+    left: 0; bottom: 0;
+    transition: all .4s;
+  }
+  .float_btn .btn_list > li {
+    margin-top: -15px;
+  }
+  .float_btn .btn_list > li:first-child {
+    margin-top: 0;
+  }
+  .float_btn .btn_list.on {
+    opacity: 1;
+    bottom: 56px;
   }
 }
 

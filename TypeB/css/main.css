@@ -156,8 +156,8 @@ h2 {font-weight: 700;font-size: 18px;}
   content: '';
   display: inline-block;
   width: 8px; height: 14px;
-  margin-left: 30px;
-  background: url('../images/mall/arr-right-blue.jpg') no-repeat center;
+  margin-left: 44px;
+  background: url('../images/mall/arr-right-white.png') no-repeat center;
 }
 .company_gnb .gnb_links {
   display: inline-block;
@@ -228,6 +228,9 @@ h2 {font-weight: 700;font-size: 18px;}
   transform: translateY(-50%);
   width: 24px; height: 24px;
   background: url('../images/main/ico-sch.png') no-repeat center;
+}
+.point_blue {
+  color: #03a2ea;
 }
 .point_circle {
   position: relative;
