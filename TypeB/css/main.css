@@ -541,7 +541,16 @@ h2 {font-weight: 700;font-size: 18px;}
 .sevice-area .gallery-text {position:absolute;bottom:0;display: block;width:336px;}
 .sevice-area .gallery-top .swiper-slide.swiper-slide-prev {opacity: 0;}
 
-
+.slide_floatmenu {
+  position: absolute;
+  right: 53px;
+  top: 50%;
+  width: auto;
+  max-width: 100%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 99;
+}
 
 
 .gallery-thumbs .swiper-button-next {
