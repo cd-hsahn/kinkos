@@ -12,7 +12,7 @@
       $('.gnb_links').removeClass('on');
     }
   });
-  function showMainGnb() {
+  function showMainGnb() {₩1
     setTimeout(function() {
       $('.gnb_links').addClass('on');
     },400);
@@ -22,21 +22,24 @@
 // sub gnb show / hide
 (function() {
   $('.gnb > li > a').on('mouseenter', function() {
-    var title = $(this).text();
+    var idx = $(this).parent().index();
+
     $('.gnb > li > a').addClass('not_on');
     $(this).removeClass('not_on').addClass('on');
-    $('.sub_gnb').stop().slideDown(500);
 
-    $('.js-snb-title').text(title);
-
-    if ($(this).hasClass('js-location')) {
-      $('.sub_gnb_item').hide();
-      $('.location_item').show();
-    } else {
+    if (idx === 1) {
       $('.sub_gnb_item').show();
       $('.location_item').hide();
+      $('.sub_gnb').stop().slideDown(500);
+      $('.dim').show();
+    } else if (idx === 6) {
+      $('.sub_gnb_item').hide();
+      $('.location_item').show();
+      $('.sub_gnb').stop().slideDown(500);
+    } else {
+      $('.sub_gnb').stop().slideUp(500);
+      $('.dim').hide();
     }
-    $('.dim').show();
   });
   $('.gnb > li > a').on('mouseleave', function() {
     $('.gnb > li > a').removeClass('on');

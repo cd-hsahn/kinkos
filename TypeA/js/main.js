@@ -13,13 +13,17 @@ $(document).ready(function() {
       $('.sub_links').slideDown(500);
     } else if (idx === 4) {
       $('#header').addClass('active');
+      $(this).find('a').addClass('on');
+    }
+    if (idx !== 4) {
+      $('.point_location').removeClass('on');
     }
   });
   $('#header').on('mouseleave', function() {
     $(this).removeClass('active');
     $('.sub_links').slideUp(500);
-
-  })
+    $('.point_location').removeClass('on');
+  });
 
   $(window).scroll(function () {
     var scrollHeight = $(document).height();
