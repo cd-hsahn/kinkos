@@ -37,11 +37,12 @@ $(document).ready(function(){
   // thumbnail slider
    var galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 10,
+      centeredSlides: true,
 	 		loop: true,
-			loopedSlides: 4
+			loopedSlides: 3
     });
     var galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 0,
+      spaceBetween: 65,
       centeredSlides: true,
       slidesPerView: 'auto',
       touchRatio: 0.5,
@@ -49,8 +50,8 @@ $(document).ready(function(){
 			loop: true,
       loopedSlides: 3,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.section4_next',
+        prevEl: '.section4_prev',
       }
     });
     galleryTop.controller.control = galleryThumbs;
@@ -80,7 +81,19 @@ $(document).ready(function(){
     });
     $('.m_btn_prev').on('click', function() {
 			$('.m_gnb').removeClass('active');
-		});		
+    });
 
+    // fixedmenu 
+    var swiper = new Swiper('.product_list', {
+      direction: 'vertical',
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      loop: true,
+      loopedSlides: 3,
+      navigation: {
+        nextEl: '.fixed-next',
+        prevEl: '.fixed-prev',
+      }
+    });
 });
 
