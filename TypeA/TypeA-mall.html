@@ -8,8 +8,6 @@
 
   <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/swiper.min.css">
-  <link rel="stylesheet" href="./assets/css/slick.css">
-  <link rel="stylesheet" href="./assets/css/slick-theme.css">
   <link rel="stylesheet" href="./css/mall.css">
 </head>
 <body>
@@ -43,7 +41,7 @@
       <div class="gnb_dept2">
         <div class="gnb_dept2_item">
           <div class="dept2_title">
-            <strong>대형출력/보드</strong>
+            <strong class="js-snb-title">대형출력/보드</strong>
             <p>킨코스에서는 선명한 컬러와<br>높은 해상도로 고품질의 현수막<br>출력이 가능합니다.</p>
           </div>
           <div class="dept2_detail">
@@ -70,22 +68,32 @@
     </div>
     <div id="content" class="content">
       <div class="main_slide">
-        <div class="slide1">
-          <div>
-            <a href="#a"><img src="images/mall/visual_text.png" alt=""></a>
-          </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="slide1 swiper-slide">
+              <a href="#a" class="wow fadeInLeft" data-wow-duration="1s"  data-wow-offset="200"><img src="images/mall/visual_text.png" alt=""></a>
+            </div>
+            <div class="slide1 swiper-slide">
+              <a href="#a" class="wow fadeInLeft" data-wow-duration="1s"  data-wow-offset="200"><img src="images/mall/visual_text.png" alt=""></a>
+            </div>
+          </div> 
+          <div class="btn_arrow">
+            <div class="swiper-button-next btn_next"></div>
+            <div class="swiper-button-prev btn_prev"></div>
+          </div> 
         </div>
+        <!-- Add Arrows -->            
       </div>
       <section class="section1">
         <h2>명함</h2>
-        <ul class="tab_button">
-          <li><button class="tablinks active" onclick="openCity(event, 'section1_tab1')">즉석명함</button></li>
-          <li><button class="tablinks" onclick="openCity(event, 'section1_tab2')">템플릿명함</button></li>
-          <li><button class="tablinks" onclick="openCity(event, 'section1_tab3')">편집/상담/특수명함</button></li>
+        <ul class="tab_button js-tabnav">
+          <li><button class="tablinks active">즉석명함</button></li>
+          <li><button class="tablinks">템플릿명함</button></li>
+          <li><button class="tablinks">편집/상담/특수명함</button></li>
         </ul>
-        <div class="tab_container">
-          <div id="section1_tab1" class="tabcontent" style="display:block;">
-            <ul>
+        <div class="tab_container js-tabcon">
+          <div class="tabcontent active">
+            <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
               <li><a href="#a">
                 <div><img src="images/mall/list1_1.jpg" alt=""></div>
                 <h3>즉석 명함_100매</h3>
@@ -112,24 +120,74 @@
               </a></li>
             </ul>
           </div>
-          <div id="section1_tab2" class="tabcontent">
-            <p>section1_tab2</p>
+          <div class="tabcontent">
+            <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+              <li><a href="#a">
+                <div><img src="images/mall/list1_1.jpg" alt=""></div>
+                <h3>즉석 명함_100매</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list1_2.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                <h3>즉석 소량 명함10매(양면)</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list1_3.jpg" alt=""></div>
+                <h3>명함 주문 제작 및 디자인</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list1_4.jpg" alt=""></div>
+                <h3>즉석 명함_100매</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+            </ul>
           </div>
-          <div id="section1_tab3" class="tabcontent">
-            <p>section1_tab3</p>
+          <div class="tabcontent">
+            <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+              <li><a href="#a">
+                <div><img src="images/mall/list1_1.jpg" alt=""></div>
+                <h3>즉석 명함_100매</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list1_2.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                <h3>즉석 소량 명함10매(양면)</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list1_3.jpg" alt=""></div>
+                <h3>명함 주문 제작 및 디자인</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list1_4.jpg" alt=""></div>
+                <h3>즉석 명함_100매</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+            </ul>
           </div>
         </div>
       </section>
       <section class="section2">
         <h2>대형출력/보드</h2>
-        <ul class="tab_button">
-          <li><button class="tablinks active" onclick="openCity(event, 'section2_tab1')">패키지</button></li>
-          <li><button class="tablinks" onclick="openCity(event, 'section2_tab2')">템플릿명함</button></li>
-          <li><button class="tablinks" onclick="openCity(event, 'section2_tab3')">비규격·상담문의</button></li>
+        <ul class="tab_button js-tabnav">
+          <li><button class="tablinks active">패키지</button></li>
+          <li><button class="tablinks">템플릿명함</button></li>
+          <li><button class="tablinks">비규격·상담문의</button></li>
         </ul>
-        <div class="tab_container">
-          <div id="section2_tab1" class="tabcontent" style="display:block;">
-            <ul>
+        <div class="tab_container js-tabcon">
+          <div class="tabcontent active">
+            <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
               <li><a href="#a">
                 <div><img src="images/mall/list2_1.jpg" alt=""></div>
                 <h3>패키지</h3>
@@ -156,24 +214,130 @@
               </a></li>
             </ul>
           </div>
-          <div id="section2_tab2" class="tabcontent">
-            <p>section2_tab2</p> 
+          <div class="tabcontent">
+            <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+              <li><a href="#a">
+                <div><img src="images/mall/list2_1.jpg" alt=""></div>
+                <h3>패키지</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list2_2.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                <h3>즉석 포스터 출력A2</h3>
+                <span>4시간안에 완성되는 대형 인화 출력</span>
+                <p>15,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list2_3.jpg" alt=""></div>
+                <h3>포스토 비규격사이즈</h3>
+                <span>로고 제작 부터 편집 디자인까지-</span>
+                <p>상담문의</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list2_4.jpg" alt=""></div>
+                <h3>즉석 포스터 출력A0</h3>
+                <span>4시간만에 완성되는 대형 인화 출력</span>
+                <p>30,000원</p>
+              </a></li>
+            </ul>
           </div>
-          <div id="section2_tab3" class="tabcontent">
-            <p>section2_tab3</p> 
+          <div class="tabcontent">
+            <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+              <li><a href="#a">
+                <div><img src="images/mall/list2_1.jpg" alt=""></div>
+                <h3>패키지</h3>
+                <span>13시 이전 접수_당일 완성!</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list2_2.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                <h3>즉석 포스터 출력A2</h3>
+                <span>4시간안에 완성되는 대형 인화 출력</span>
+                <p>15,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list2_3.jpg" alt=""></div>
+                <h3>포스토 비규격사이즈</h3>
+                <span>로고 제작 부터 편집 디자인까지-</span>
+                <p>상담문의</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list2_4.jpg" alt=""></div>
+                <h3>즉석 포스터 출력A0</h3>
+                <span>4시간만에 완성되는 대형 인화 출력</span>
+                <p>30,000원</p>
+              </a></li>
+            </ul>
           </div>
         </div>
       </section>
       <section class="section3">
         <h2>디지털출력/스티커</h2>
-        <ul class="tab_button">
-          <li><button class="tablinks active" onclick="openCity(event, 'section3_tab1')">즉석스티커</button></li>
-          <li><button class="tablinks" onclick="openCity(event, 'section3_tab2')">브로슈어/표지</button></li>
-          <li><button class="tablinks" onclick="openCity(event, 'section3_tab3')">하드커버</button></li>
+        <ul class="tab_button js-tabnav">
+          <li><button class="tablinks active">즉석스티커</button></li>
+          <li><button class="tablinks">브로슈어/표지</button></li>
+          <li><button class="tablinks">하드커버</button></li>
         </ul>
-        <div class="tab_container">
-          <div id="section3_tab1" class="tabcontent" style="display:block;">
-            <ul>
+        <div class="tab_container js-tabcon">
+          <div class="tabcontent active">
+            <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+              <li><a href="#a">
+                <div><img src="images/mall/list3_1.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                <h3>원형스티커(온라인할인)</h3>
+                <span>2시간만에 완성되는 즉석스티커</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list3_2.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                <h3>즉석 포스터 출력A2</h3>
+                <span>4시간안에 완성되는 대형 인화 출력</span>
+                <p>15,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list3_3.jpg" alt=""></div>
+                <h3>스마트 날개형 책표지(단면)</h3>
+                <span>인쇄한 것 같은 완성도 높은 책표지</span>
+                <p>7,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list3_4.jpg" alt=""></div>
+                <h3>스마트 즉석 브로슈어 3단 (6p)</h3>
+                <span>3시간만에 완성되는 3단 브로슈어</span>
+                <p>30,000원</p>
+              </a></li>
+            </ul>
+          </div>
+          <div class="tabcontent">
+            <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+              <li><a href="#a">
+                <div><img src="images/mall/list3_1.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                <h3>원형스티커(온라인할인)</h3>
+                <span>2시간만에 완성되는 즉석스티커</span>
+                <p>30,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list3_2.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                <h3>즉석 포스터 출력A2</h3>
+                <span>4시간안에 완성되는 대형 인화 출력</span>
+                <p>15,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list3_3.jpg" alt=""></div>
+                <h3>스마트 날개형 책표지(단면)</h3>
+                <span>인쇄한 것 같은 완성도 높은 책표지</span>
+                <p>7,000원</p>
+              </a></li>
+              <li><a href="#a">
+                <div><img src="images/mall/list3_4.jpg" alt=""></div>
+                <h3>스마트 즉석 브로슈어 3단 (6p)</h3>
+                <span>3시간만에 완성되는 3단 브로슈어</span>
+                <p>30,000원</p>
+              </a></li>
+            </ul>
+          </div>
+          <div class="tabcontent">
+            <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
               <li><a href="#a">
                 <div><img src="images/mall/list3_1.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
                 <h3>원형스티커(온라인할인)</h3>
@@ -203,17 +367,26 @@
         </div>
       </section>
       <section class="section4">
-        <div class="section4_menu">
-          <div>
-            <div><a href="#a">배너/POP/등신대</a></div>
-            <div><a href="#a">슬로건/인화/카드</a></div>
-            <div><a href="#a">이벤트소품 / 기타</a></div>
-          </div>
+        <div class="section4_menu swiper-container gallery-thumbs">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#a">배너/POP/등신대</a><!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div class="swiper-slide"><a href="#a">슬로건/인화/카드</a><!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div class="swiper-slide"><a href="#a">이벤트소품 / 기타</a><!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>            
         </div>
         <div class="tab_container swiper-container gallery-top">
-          <div class="tabcontent swiper-wrapper" style="display:block;">
+          <div class="tabcontent swiper-wrapper">
             <div class="swiper-slide">
-              <ul>
+              <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
                 <li><a href="#a">
                   <div><img src="images/mall/list4_1.jpg" alt=""></div>
                   <h3>종이 슬로건</h3>
@@ -240,29 +413,80 @@
                 </a></li>
               </ul>
             </div>            
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>         
+            <div class="swiper-slide">
+              <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                <li><a href="#a">
+                  <div><img src="images/mall/list4_1.jpg" alt=""></div>
+                  <h3>종이 슬로건</h3>
+                  <span>사이즈 선택</span>
+                  <p>5,000원</p>
+                </a></li>
+                <li><a href="#a">
+                  <div><img src="images/mall/list4_2.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                  <h3>즉석 사진인화</h3>
+                  <span>2시간만에 완성되는 즉석인화</span>
+                  <p>500원</p>
+                </a></li>
+                <li><a href="#a">
+                  <div><img src="images/mall/list4_3.jpg" alt=""></div>
+                  <h3>포토카드</h3>
+                  <span>You are the only one for me</span>
+                  <p>4,900원</p>
+                </a></li>
+                <li><a href="#a">
+                  <div><img src="images/mall/list4_4.jpg" alt=""></div>
+                  <h3>종이 슬로건</h3>
+                  <span>사이즈 선택</span>
+                  <p>15,000원</p>
+                </a></li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                <li><a href="#a">
+                  <div><img src="images/mall/list4_1.jpg" alt=""></div>
+                  <h3>종이 슬로건</h3>
+                  <span>사이즈 선택</span>
+                  <p>5,000원</p>
+                </a></li>
+                <li><a href="#a">
+                  <div><img src="images/mall/list4_2.jpg" alt=""><img src="images/mall/ico_speed.png" alt="" class="ico_speed"></div>
+                  <h3>즉석 사진인화</h3>
+                  <span>2시간만에 완성되는 즉석인화</span>
+                  <p>500원</p>
+                </a></li>
+                <li><a href="#a">
+                  <div><img src="images/mall/list4_3.jpg" alt=""></div>
+                  <h3>포토카드</h3>
+                  <span>You are the only one for me</span>
+                  <p>4,900원</p>
+                </a></li>
+                <li><a href="#a">
+                  <div><img src="images/mall/list4_4.jpg" alt=""></div>
+                  <h3>종이 슬로건</h3>
+                  <span>사이즈 선택</span>
+                  <p>15,000원</p>
+                </a></li>
+              </ul>
+            </div>   
           </div>
         </div>
       </section>
       <section class="section5">
-        <ul>
-          <li><a href="#a"><img src="images/mall/img_banner1.jpg" alt=""></a></li>
-          <li><a href="#a"><img src="images/mall/img_banner2.png" alt=""></a></li>
-          <li><a href="#a"><img src="images/mall/img_banner3.png" alt=""></a></li>
+        <ul class="wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+          <li><a href="#a"><img src="images/mall/img_banner1.jpg" alt=""><span class="color_bg"></span></a></li>
+          <li><a href="#a"><img src="images/mall/img_banner2.png" alt=""><span class="color_bg"></span></a></li>
+          <li><a href="#a"><img src="images/mall/img_banner3.png" alt=""><span class="color_bg"></span></a></li>
         </ul>
       </section>
-    </div>
     <footer>
       <div class="footer_wrap"></div>
     </footer>
     <div id="dim"></div>
   </div>
-
   <script src="./js/jquery-3.4.1.min.js"></script>
   <script src="./js/wow.min.js"></script>
   <script src="./js/swiper.min.js"></script>
-  <script src="./assets/js/slick.min.js"></script>
   <script src="./js/mall.js"></script>
 </body>
 </html>

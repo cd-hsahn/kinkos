@@ -1,38 +1,78 @@
 // TypeA Mall page JS
 
 $(document).ready(function(){
-  
 
   new WOW().init();
 
-  $('.gnb_link li').on('mouseenter', function() {
-    $('.gnb_dept2').addClass('active');
+  // gnb
+  $('.gnb_link > li > a').on('mouseenter', function() {
+    var title = $(this).text();
+    $(this).addClass('active');
+    $('.gnb_dept2').stop().slideDown(500);
+
+    $('.js-snb-title').text(title);
     $('#dim').show();
   });
-  $('.gnb_dept2').on('mouseleave', function() {
-    $(this).removeClass('active');
+  $('.gnb_link > li > a').on('mouseleave', function() {
+    $('.gnb_link > li > a').removeClass('active');
   });
   $('#header').on('mouseleave', function() {
+    $('.gnb_dept2').stop().slideUp(500);
     $('#dim').hide();
   });
+  $('.gnb_dept1').on('mouseenter', function() {
+    $('.gnb_dept2').stop().slideUp(500);
+    $('#dim').hide();
+  });
+
+  // visual slider
+  var swiper = new Swiper('.main_slide .swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.btn_next',
+      prevEl: '.btn_prev',
+    },
+  });
+
+  // thumbnail slider
+   var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+	 		loop: true,
+			loopedSlides: 4
+    });
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 0,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      touchRatio: 0.5,
+      slideToClickedSlide: true,
+			loop: true,
+      loopedSlides: 3,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
   
+
+    // tab
+    $('.js-tabnav').each(function(){
+      console.log();
+    });
+    $('.tablinks').on('click', function() {
+      var wrapper = $(this).closest('.js-tabnav'),
+        tabconWrapper = wrapper.next('.js-tabcon');
+
+      var idx = $(this).parent().index();
+
+      tabconWrapper.find('.tabcontent').removeClass('active');
+      tabconWrapper.find('.tabcontent').eq(idx).addClass('active');
+      
+      wrapper.find('.tablinks').removeClass('active');
+      wrapper.find('.tablinks').eq(idx).addClass('active');    
+    });
+
 });
 
-TAB
-function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
