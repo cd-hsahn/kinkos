@@ -131,3 +131,10 @@ $('.btn_plus').on('click', function() {
   $(this).toggleClass('on');
   $('.btn_list').toggleClass('on');
 });
+
+$('.section_service .thumb').on('mouseenter', function() {
+  $(this).find('.over').addClass('on');
+});
+$('.section_service .thumb').on('mouseleave', function() {
+  $(this).find('.over').removeClass('on');
+});

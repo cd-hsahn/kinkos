@@ -567,8 +567,10 @@ position: absolute;
   border-bottom: 1px solid #e7e7e7;
 }
 .section_service li {
+  overflow: hidden;
+  position: relative;
   float:left;
-  width:20%;
+  width: calc(100% / 6)
 }
 .section_service li a {
   display: block;
@@ -580,12 +582,19 @@ position: absolute;
   border-left: 1px solid #e7e7e7;
   border-top: 1px solid #e7e7e7;
 }
-.section_service li a:hover {
-  display: block;
-  text-align: center;
-  font-size:18px;
-  color:#03a2ea;
-  font-weight: 700;
+.section_service li .over {
+  opacity: 0;
+  position: absolute;
+  left: 0; bottom: -100%;
+  width: 100%; height: 100%;
+  transition: all .5s;
+}
+.section_service li .over img {
+  width: 100%;
+}
+.section_service li .over.on {
+  opacity: 1;
+  bottom: 0;
 }
 
 .section_kko {
@@ -716,16 +725,7 @@ position: absolute;
   font-size: 12px;
   color: #747474;
 }
-.section_service .thumb {position:relative;z-index: 999;}
-
-.section_service .thumb:before,
-.section_service .thumb:after {content:"";display:inline-block;position:absolute;width:0;height:0;border:3px solid transparent;box-sizing:border-box;}
-.section_service .thumb:before {top:0; left:0}
-.section_service .thumb:after {bottom:0; right:0}
-.section_service .thumb:hover:before,
-.section_service .thumb:hover:after {width:100%; height:100%;z-index: 999;}
-.section_service .thumb:hover:before {border-top-color:#03a2ea; border-right-color:#03a2ea; transition: width 0.15s ease-out, height 0.15s ease-out 0.15s; -webkit-transition: width 0.15s ease-out, height 0.15s ease-out 0.15s}
-.section_service .thumb:hover:after {border-bottom-color:#03a2ea; border-left-color:#03a2ea; transition: border-color 0s ease-out 0.3s, width 0.15s ease-out 0.3s, height 0.15s ease-out 0.45s; -webkit-transition: border-color 0s ease-out 0.3s, width 0.15s ease-out 0.3s, height 0.15s ease-out 0.45s}
+.section_service .thumb {position:relative;}
 
 .bbs {width:1530px;margin:150px auto 0 auto;overflow: hidden;}
 .bbs h2 {font-size: 28px;}
