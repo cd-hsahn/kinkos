@@ -12,7 +12,7 @@
       $('.gnb_links').removeClass('on');
     }
   });
-  function showMainGnb() {₩1
+  function showMainGnb() {
     setTimeout(function() {
       $('.gnb_links').addClass('on');
     },400);
@@ -27,18 +27,16 @@
     $('.gnb > li > a').addClass('not_on');
     $(this).removeClass('not_on').addClass('on');
 
-    if (idx === 1) {
+    if (idx === 6) {
+      $('.sub_gnb_item').hide();
+      $('.location_item').show();
+      $('.sub_gnb').stop().slideDown(500);
+      $('.dim').show();
+    } else {
       $('.sub_gnb_item').show();
       $('.location_item').hide();
       $('.sub_gnb').stop().slideDown(500);
       $('.dim').show();
-    } else if (idx === 6) {
-      $('.sub_gnb_item').hide();
-      $('.location_item').show();
-      $('.sub_gnb').stop().slideDown(500);
-    } else {
-      $('.sub_gnb').stop().slideUp(500);
-      $('.dim').hide();
     }
   });
   $('.gnb > li > a').on('mouseleave', function() {
