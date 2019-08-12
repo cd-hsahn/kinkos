@@ -5,7 +5,7 @@ $(document).ready(function(){
   new WOW().init();
 
   // gnb
-  $('.gnb_link > li > a').on('mouseenter', function() {
+  $('.gnb_link > .js-show > a').on('mouseenter', function() {
     var title = $(this).text();
     $(this).addClass('active');
     $('.gnb_dept2').stop().slideDown(500);
@@ -73,6 +73,14 @@ $(document).ready(function(){
       wrapper.find('.tablinks').removeClass('active');
       wrapper.find('.tablinks').eq(idx).addClass('active');    
     });
+
+    // mobile
+    $('.gnb_open').on('click', function() {
+      $('.m_gnb').addClass('active');
+    });
+    $('.m_btn_prev').on('click', function() {
+			$('.m_gnb').removeClass('active');
+		});		
 
 });
 
