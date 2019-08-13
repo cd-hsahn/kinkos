@@ -186,7 +186,7 @@ img {max-width:100%;}
   font-size: 18px;
   font-weight: bold;
 }
-.link_list > li > a:hover {
+.link_list > li.on > a {
   color: #03a2ea;
 }
 .link_list .sub_links {
@@ -461,6 +461,70 @@ position: absolute;
   background: url(../images/main/new_mainslide01.jpg) no-repeat center;
   background-size: cover;
 }
+.main_slide .item .txt {
+  opacity: 0;
+  position: absolute;
+  left: 0; top: 0;
+  transition: all .6s;
+}
+.main_slide .item .img {
+  position: absolute;
+  right: 0; bottom: 0;
+  overflow: hidden;
+  height: 0;
+  transition: all .6s;
+  transition-delay: .4s;
+}
+.main_slide .item .img .bg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  transition: all .6s;
+  transition-delay: .6s;
+  /* animation: imgFill .5s ease forwards, imgMove .5s ease .5s forwards; */
+}
+.main_slide .item .txt {
+  left: 200px; top: 235px;
+}
+.main_slide .item .img {
+  right: 289px; bottom: -400px;
+  transition: all .6s;
+}
+.main_slide .item.first .img .bg {
+  background: #f3ce55;
+}
+.main_slide .item.second .img .bg {
+  background: #c96fc0;
+}
+.main_slide .swiper-slide-active .item .txt {
+  opacity: 1;
+  left: 326px;
+}
+.main_slide .swiper-slide-active .item .img {
+  height: 572px;
+  bottom: 87px;
+}
+.main_slide .swiper-slide-active .item .img .bg {
+  height: 0;
+}
+
+@keyframes imgFill {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes imgMove {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
 .main_slide .item.second {
   background: url(../images/main/new_mainslide02.jpg) no-repeat center;
   background-size: cover;
@@ -496,7 +560,7 @@ position: absolute;
 }
 .swiper_btn .swiper-button-next {
   width: 66px; height: 66px;
-  margin-left: 20px;
+  margin-left: 10px;
   background: url(../images/main/ico-right.png) no-repeat 0 0;
 }
 .swiper_btn .swiper-button-prev {
@@ -1689,11 +1753,11 @@ position: absolute;
   }
   .float_btn {
     position: fixed;
-    right: 0; top: 700px;
+    right: 0; top: 600px;
   }
   .float_btn .btn_plus {
     position: relative;
-    display: inline-block;
+    display: block;
     width: 70px; height: 70px;
     background: url('../images/main/btn-plus.png') no-repeat center;
     z-index: 99;
@@ -1715,11 +1779,23 @@ position: absolute;
   }
   .float_btn .btn_list.on {
     opacity: 1;
-    bottom: 56px;
+    bottom: 116px;
+  }
+  .float_btn .btn_mall {
+    position: relative;
+    display: block;
+    margin-top: -10px;
+    width: 70px; height: 70px;
+    background: url('../images/main/btn-mall.png') no-repeat center;
+    z-index: 99;
   }
 }
 
-
+.go_mall {
+  position: absolute;
+  right: 195px; top: 0;
+  width: 170px; height: 80px;
+}
 
 
 @media screen and (max-width: 1600px) {

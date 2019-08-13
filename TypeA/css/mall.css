@@ -125,7 +125,7 @@ table {
 .mall_wrap .header .gnb_dept1 .gnb_link a {
   display:inline-block;
   margin:0 20px;
-  font-size:18px; font-weight:700;
+  font-size:18px; font-weight:500;
 }
 .mall_wrap .header .gnb_dept1 .gnb_link:after {
   content:''; display:block; clear:both;
@@ -284,13 +284,20 @@ table {
   display:block; width:436px; height:243px;
   transition:all 0.5s;
 }
+.mall_wrap .content .main_slide .slide2 {
+  background:url('../images/mall/visual02.png') no-repeat;
+}
+.mall_wrap .content .main_slide .slide2 a {
+  display:block; width:436px; height:243px;
+  transition:all 0.5s;
+}
 .mall_wrap .content .main_slide .slide {
   padding:140px 0 167px 235px;  
   background-position:center;
   background-size:cover;
 }
 .content .main_slide .slide a {
-  transform: translateY(-50px);
+  transform: translateY(-200px);
   transition:all 0.5s;
   opacity:0;
 }
@@ -452,6 +459,7 @@ table {
   line-height:24px;
 }
 .mall_wrap .content .section4_menu {
+  overflow: hidden;
   margin:0 auto;
   width:900px;
 }
@@ -462,6 +470,8 @@ table {
 .mall_wrap .content .gallery-thumbs .swiper-slide {
   opacity:1;
   vertical-align: middle;
+  height: 44px;
+  line-height: 44px;
 }
 .mall_wrap .content .gallery-thumbs .swiper-slide a{
   color:#bcbcbc;
@@ -477,7 +487,7 @@ table {
 }
 
 .mall_wrap .content .section4_menu .swiper-slide-active {
-  margin-top:-6px;
+  /* margin-top:-6px; */
 }
 .mall_wrap .content .section4_menu .swiper-slide-active a {
   color:#000;
@@ -662,8 +672,13 @@ footer .footer_wrap {
   }
   .gnb_open {
     position:absolute;
-    top:27px; left:27px;
+    top:0; left:0;
     width:50px; height:50px;
+  }
+  .btn_main {
+    position: absolute;
+    left: 100px; top: 6px;
+    width: 160px; height: 50px;
   }
   .m_gnb {
     position:absolute; top:0; bottom:0; left:-800px;

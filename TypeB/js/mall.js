@@ -107,6 +107,19 @@ var consultSlide = new Swiper('.consult_slide', {
     }
   },
 });
+(function() {
+  var width = 1530;
+
+  $('.tab_nav > li').on('click', function() {
+    var idx = $(this).index();
+    var move = idx * width;
+
+    $('.tab_nav > li').removeClass('active');
+    $(this).addClass('active');
+
+    $('.tab_con .tab_item').css({"transform": "translate3d(-" + move + "px, 0px, 0px)"});
+  });
+})();
 
 // mobile
 (function() {
