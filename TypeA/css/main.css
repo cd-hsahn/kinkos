@@ -739,16 +739,15 @@ position: absolute;
 .section_service li .over {
   opacity: 0;
   position: absolute;
-  left: 0; bottom: -100%;
+  left: 0; top: 0;
   width: 100%; height: 100%;
-  transition: all .5s;
+  transition: opacity .5s;
 }
 .section_service li .over img {
   width: 100%;
 }
 .section_service li .over.on {
   opacity: 1;
-  bottom: 0;
 }
 
 .section_kko {

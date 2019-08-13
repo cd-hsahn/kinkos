@@ -24,6 +24,7 @@
   $('.gnb > li > a').on('mouseenter', function() {
     var idx = $(this).parent().index();
 
+    $('.gnb > li > a').removeClass('on');
     $('.gnb > li > a').addClass('not_on');
     $(this).removeClass('not_on').addClass('on');
 
@@ -39,18 +40,18 @@
       $('.dim').show();
     }
   });
-  $('.gnb > li > a').on('mouseleave', function() {
-    $('.gnb > li > a').removeClass('on');
-  });
   $('#header').on('mouseleave', function() {
+    $('.gnb > li > a').removeClass('on');
     $('.gnb > li > a').removeClass('not_on');
     $('.sub_gnb').stop().slideUp(500);
     $('.dim').hide();
   });
   $('.header_top').on('mouseenter', function() {
+    $('.gnb > li > a').removeClass('on');
     $('.gnb > li > a').removeClass('not_on');
     $('.sub_gnb').stop().slideUp(500);
     $('.dim').hide();
+
   });
 })();
 
@@ -80,6 +81,7 @@ var mainSlide = new Swiper('.main_slide', {
   speed: 500,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 });
 var speedSlide = new Swiper('.speed_slide', {
@@ -129,6 +131,6 @@ var consultSlide = new Swiper('.consult_slide', {
   });
   $('.btn_close').on('click', function() {
     $('.menu').removeClass('open');
-    $('body').css('overflow', 'visible');
+    $('body').css('overflow', 'auto');
   });
 })();

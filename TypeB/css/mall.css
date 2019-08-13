@@ -340,9 +340,11 @@ strong {
   opacity: 0;
   transition: all .7s ease-in-out;
 }
-.main_slide .txt.right {
+.main_slide .txt.right,
+.main_slide .txt.right2 {
   right: 25%;
 }
+
 .main_slide .txt.left {
   left: 25%;
 }
@@ -351,6 +353,9 @@ strong {
 }
 .main_slide .swiper-slide-active .txt.right {
   right: 18.5%;
+}
+.main_slide .swiper-slide-active .txt.right2 {
+  right: 15.6%;
 }
 .main_slide .swiper-slide-active .txt.left {
   left: 18.5%;
@@ -598,7 +603,8 @@ strong {
 }
 .consult_slide .swiper-pagination .consult_nav {
   display: block;
-  margin-top: 20px;
+  margin-top: 15px;
+  padding: 4px 0;
   font-size: 18px;
   text-align: left;
 }
@@ -1028,7 +1034,7 @@ strong {
     position: absolute;
     left: -100%; top: 0;
     width: 100%; height: 100%;
-    transition: left .3s linear;
+    transition: left .3s ease;
   }
   #mo .menu > img {
     width: 100%;

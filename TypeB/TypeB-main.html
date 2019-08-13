@@ -390,9 +390,13 @@
   <script>
     $('.btn_menu').on('click', function() {
       $('.menu').addClass('open');
+      $('.mo_quick').hide();
+      $('body').css('overflow', 'hidden');
     });
     $('.btn_close').on('click', function() {
       $('.menu').removeClass('open');
+      $('.mo_quick').show();
+      $('body').css('overflow', 'auto');
     });
     var swiper = new Swiper('.visual-slide', {
       slidesPerView: 1,

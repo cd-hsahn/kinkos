@@ -13,12 +13,10 @@ $(document).ready(function(){
     $('.js-snb-title').text(title);
     $('#dim').show();
   });
-  $('.gnb_link > li > a').on('mouseleave', function() {
-    $('.gnb_link > li > a').removeClass('active');
-  });
   $('#header').on('mouseleave', function() {
     $('.gnb_dept2').stop().slideUp(500);
     $('#dim').hide();
+    $('.gnb_link > li > a').removeClass('active');
   });
   $('.gnb_dept1').on('mouseenter', function() {
     $('.gnb_dept2').stop().slideUp(500);
@@ -78,9 +76,13 @@ $(document).ready(function(){
     // mobile
     $('.gnb_open').on('click', function() {
       $('.m_gnb').addClass('active');
+      $('.mo_dim').show();
+      $('body').css('overflow', 'hidden');
     });
     $('.m_btn_prev').on('click', function() {
-			$('.m_gnb').removeClass('active');
+      $('.m_gnb').removeClass('active');
+      $('.mo_dim').hide();
+      $('body').css('overflow', 'auto');
     });
 
     // fixedmenu 
