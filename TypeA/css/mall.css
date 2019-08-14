@@ -97,10 +97,17 @@ table {
   min-width:1530px;
   text-align:center;
 }
+.company_wrap .header .gnb_dept1 {
+  padding-bottom: 10px;
+}
 .mall_wrap .header .gnb_dept1 h1 {
   float:left;
   margin-top:10px;
   width:215px; height:40px;
+}
+.company_wrap .header .gnb_dept1 h1 {
+  width:221px; height:59px;
+  margin-top: 0;
 }
 .mall_wrap .header .gnb_dept1 h1 a,
 .mall_wrap .header .gnb_dept1 h1 img {
@@ -127,8 +134,17 @@ table {
   margin:0 20px;
   font-size:18px; font-weight:500;
 }
+.company_wrap .header .gnb_dept1 .gnb_link a {
+  margin:0 35px;
+}
+.company_wrap .header .gnb_dept1 .gnb_link a:hover {
+  color: #03a2ea;
+}
 .mall_wrap .header .gnb_dept1 .gnb_link:after {
   content:''; display:block; clear:both;
+}
+.mall_wrap .header .gnb_dept1 .gnb_link > li:first-child a {
+  margin-left: 0;
 }
 .mall_wrap .header .gnb_dept1 .gnb_my_menu {
   float:right;
@@ -280,12 +296,22 @@ table {
 .mall_wrap .content .main_slide .slide1 {
   background:url('../images/mall/visual01.png') no-repeat;
 }
+.company_wrap .content .main_slide .slide1 {
+  background:url('../images/mall/slide-mall01.jpg') no-repeat;
+}
 .mall_wrap .content .main_slide .slide1 a {
   display:block; width:436px; height:243px;
   transition:all 0.5s;
 }
+.company_wrap .content .main_slide .slide1 a {
+  display:block; width:339px; height:244px;
+  transition:all 0.5s;
+}
 .mall_wrap .content .main_slide .slide2 {
   background:url('../images/mall/visual02.png') no-repeat;
+}
+.company_wrap .content .main_slide .slide2 {
+  background:url('../images/mall/slide-mall02.jpg') no-repeat;
 }
 .mall_wrap .content .main_slide .slide2 a {
   display:block; width:436px; height:243px;
@@ -585,7 +611,7 @@ footer .footer_wrap {
 .nav_fixed {
   z-index:99;
   position:fixed;
-  top:204px; right:0;
+  right:0; bottom: 50px; 
   display:block;
   width:88px; height:409px;
   background:#fff;
