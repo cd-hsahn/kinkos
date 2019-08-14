@@ -3,6 +3,7 @@
 // gnb toggle
 (function() {
   $('.btn_gnbtoggle').on('click', function() {
+    $(this).toggleClass('open');
     $(this).closest('.company_gnb').toggleClass('active');
     $('.sub_gnb').stop().slideUp(500);
 

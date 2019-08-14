@@ -183,9 +183,11 @@ strong {
   position: absolute;
   right: 20px; top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
+}
+.company_gnb .btn_gnbtoggle > span {
   font-weight: bold;
   color: #03a2ea;
-  z-index: 10;
 }
 .company_gnb .btn_gnbtoggle::after {
   content: '';
@@ -193,6 +195,14 @@ strong {
   width: 8px; height: 14px;
   margin-left: 60px;
   background: url('../images/mall/arr-right-blue.jpg') no-repeat center;
+}
+.company_gnb .btn_gnbtoggle.open > span {
+  display: none;
+}
+.company_gnb .btn_gnbtoggle.open::after {
+  width: 14px;
+  margin-left: 0;
+  background: url('../images/mall/ico-close.png') no-repeat center;
 }
 .company_gnb .gnb_links {
   display: inline-block;
@@ -404,8 +414,9 @@ strong {
 .smart_sch {
   position: relative;
   top: -50px;
+  width: 1515px;
   height: 100px;
-  margin: 0 195px;
+  margin: 0 auto;
   z-index: 10;
   background: #fff;
   box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.1);
@@ -738,6 +749,7 @@ strong {
 .amount_prd .tab_con .tab_item .items .txt .price {
   display: block;
   margin-top: 10px;
+  font-size: 20px;
 }
 
 .process {

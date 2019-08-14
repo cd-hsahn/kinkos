@@ -148,9 +148,11 @@ h2 {font-weight: 700;font-size: 18px;}
   position: absolute;
   right: 20px; top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
+}
+.company_gnb .btn_gnbtoggle > span {
   font-weight: 500;
   color: #fff;
-  z-index: 10;
 }
 .company_gnb .btn_gnbtoggle::after {
   content: '';
@@ -158,6 +160,14 @@ h2 {font-weight: 700;font-size: 18px;}
   width: 8px; height: 14px;
   margin-left: 60px;
   background: url('../images/mall/arr-right-white.png') no-repeat center;
+}
+.company_gnb .btn_gnbtoggle.open > span {
+  display: none;
+}
+.company_gnb .btn_gnbtoggle.open::after {
+  width: 14px;
+  margin-left: 0;
+  background: url('../images/mall/ico-close-white.png') no-repeat center;
 }
 .company_gnb .gnb_links {
   display: inline-block;
