@@ -759,6 +759,7 @@ position: absolute;
 }
 .section_service li .over img {
   width: 100%;
+  vertical-align: middle;
 }
 .section_service li .over.on {
   opacity: 1;
