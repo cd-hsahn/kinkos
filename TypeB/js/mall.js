@@ -91,7 +91,11 @@ var speedSlide = new Swiper('.speed_slide', {
   loop: true,
   grabCursor: true,
   centeredSlides: true,
-  initialSlide: 1
+  initialSlide: 1,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
 });
 var consultSlide = new Swiper('.consult_slide', {
   direction: 'vertical',

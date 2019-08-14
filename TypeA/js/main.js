@@ -78,6 +78,10 @@ var lifeSlide = new Swiper('.life_slide', {
   pager: true,
   freeMode: true,
   spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
 });
 
 $('.btn_plus').on('click', function() {

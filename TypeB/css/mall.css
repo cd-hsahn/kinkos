@@ -518,6 +518,20 @@ strong {
   font-size: 14px;
   color: #444;
 }
+.speed_slide .swiper-button-next {
+  background-image: url(../images/main/next.png);
+  right: 20px; left: auto;
+  transform: translateY(-50%);
+  width:84px; height:84px;
+  background-size:84px;
+}
+.speed_slide .swiper-button-prev {
+  background-image: url(../images/main/prev.png);
+  left: 20px; right: auto;
+  transform: translateY(-50%);
+  width:84px; height:84px;
+  background-size:84px;
+}
 
 .consult_prd {
   overflow: hidden;

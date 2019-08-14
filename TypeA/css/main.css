@@ -676,6 +676,20 @@ position: absolute;
   padding: 50px;
   box-sizing: border-box;
 }
+.life_wrap .swiper-pagination {
+  left: 50%; bottom: -54px;
+  transform: translateX(-50%);
+}
+.life_wrap .swiper-pagination .swiper-pagination-bullet {
+  width: 14px; height: 14px;
+  background: #fff;
+  border: 1px solid #03a2ea;
+  opacity: 1;
+  margin: 0 6px;
+}
+.life_wrap .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #03a2ea;
+}
 /* //수정 */
 .life_slide .txt h3 {
   font-size: 22px;
@@ -754,7 +768,7 @@ position: absolute;
   box-sizing: border-box;
 
    width: 1530px;
-    margin: 150px auto 0 auto;
+    margin: 204px auto 0 auto;
 }
 
 .section_kko .img_wrap {
